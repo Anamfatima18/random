@@ -1,6 +1,424 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<?xml version="1.0" encoding="UTF-8"?>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".EmailVerification"
+    android:weightSum="10"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="70dp">
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_menu_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/SearchResults"
+            app:tint="#151515" />
+        <EditText
+            android:id="@+id/emailVerificationText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginEnd="16dp"
+            android:text="  Search Results"
+            android:textSize="30sp"
+            android:textColor="#534F4F"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="start"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_alignTop="@+id/backButton"
+            app:layout_toRightOf="@+id/backButton" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:id="@+id/seprator"
+        android:layout_marginTop="0dp"
+        android:background="#B8B8B8" />
+
+    <LinearLayout
+        android:id="@+id/Search"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@id/seprator"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/SearchText"
+            android:layout_width="170dp"
+            android:layout_height="74dp"
+            android:layout_below="@id/seprator"
+            android:layout_gravity="start"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text=" 'Some items' "
+                android:textColor="#575252"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BestMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seprator"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/greyroundb4ackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="5dp"
+                android:text=" Best Match"
+                android:textColor="#615E5E"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+
+                android:paddingTop="4dp"
+                android:src="@drawable/down" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2">
+        <!-- Feature1 -->
+        <RelativeLayout
+
+            android:id="@+id/Relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+           >
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="130dp"
+                android:src="@drawable/rounded_background"
+                android:id="@+id/firstImage"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/secondrelative"
+                android:layout_width="190dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/firstImage"
+                android:background="@drawable/bottomrounded"
+                >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Item Name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/text1"
+                    android:text="10/hr"
+                    android:textColor="#ff9800"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/text2"
+                    />
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:src="@drawable/location"
+                    android:paddingLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_toRightOf="@id/image2"
+                    android:text="Islamabad"
+                    android:paddingLeft="5dp"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_toRightOf="@id/text3"
+                    android:text="7th Mar"
+                    android:paddingLeft="7dp"
+                    android:textSize="15dp"
+                    android:paddingTop="2dp"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="130dp"
+                android:src="@drawable/rounded_background"
+                android:id="@+id/firstImage1"
+                android:layout_toRightOf="@id/firstImage"
+                android:layout_marginLeft="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="190dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/firstImage"
+                android:background="@drawable/bottomrounded"
+                android:layout_toRightOf="@id/secondrelative"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/secondtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Item Name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/secondtext"
+                    android:text="10/hr"
+                    android:textColor="#ff9800"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/num"
+                    />
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/secondtext"
+                    android:src="@drawable/location"
+                    android:paddingLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/islamabad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/secondtext"
+                    android:layout_toRightOf="@id/image1"
+                    android:text="Islamabad"
+                    android:paddingLeft="5dp"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/num"
+                    android:layout_toRightOf="@id/islamabad"
+                    android:text="7th Mar"
+                    android:paddingLeft="7dp"
+                    android:textSize="15dp"
+                    android:paddingTop="2dp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/Relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/Relative1"
+            >
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="130dp"
+                android:src="@drawable/rounded_background"
+                android:id="@+id/img"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/secondrelative1"
+                android:layout_width="190dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/img"
+                android:background="@drawable/bottomrounded"
+                >
+
+                <TextView
+                    android:id="@+id/itemname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Item Name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/itemname"
+                    android:text="10/hr"
+                    android:textColor="#ff9800"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/number"
+                    />
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/itemname"
+                    android:src="@drawable/location"
+                    android:paddingLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/isb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/itemname"
+                    android:layout_toRightOf="@id/image3"
+                    android:text="Islamabad"
+                    android:paddingLeft="5dp"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/itemname"
+                    android:layout_toRightOf="@id/isb"
+                    android:text="7th Mar"
+                    android:paddingLeft="7dp"
+                    android:textSize="15dp"
+                    android:paddingTop="2dp"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="130dp"
+                android:src="@drawable/rounded_background"
+                android:id="@+id/img2"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginLeft="10dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="190dp"
+                android:layout_height="65dp"
+                android:layout_below="@id/img2"
+                android:background="@drawable/bottomrounded"
+                android:layout_toRightOf="@id/secondrelative1"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Item Name"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/items"
+                    android:text="10/hr"
+                    android:textColor="#ff9800"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/hr"
+                    />
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/items"
+                    android:src="@drawable/location"
+                    android:paddingLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/islamabad1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/items"
+                    android:layout_toRightOf="@id/location"
+                    android:text="Islamabad"
+                    android:paddingLeft="5dp"
+                    android:textSize="17dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hr"
+                    android:layout_toRightOf="@id/islamabad1"
+                    android:text="7th Mar"
+                    android:paddingLeft="7dp"
+                    android:textSize="15dp"
+                    android:paddingTop="2dp"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

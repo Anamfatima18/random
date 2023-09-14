@@ -42,8 +42,9 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:layout_marginTop="20dp"
+        android:id="@id/horizontalFeatureItems"
         android:orientation="vertical">
 
         <TextView
@@ -61,7 +62,8 @@
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
+            android:paddingLeft="15dp"
+            android:id="@+id/horizontalFeatureItems"
             android:scrollbars="none">
 
             <LinearLayout
@@ -70,231 +72,231 @@
                 android:orientation="horizontal">
                 <!-- Feature1 -->
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
-
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/colored_circular_boarder"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_background"
+                        />
 
                     <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
 
                         <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
                             android:orientation="horizontal"
-                            android:paddingTop="8dp">
+                            android:weightSum="3">
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 1 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:paddingLeft="8dp"
+                                android:text="Item Name"
+                                android:textColor="#000000"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$10/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="$10/hr"
+                                android:textColor="#FF9800"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
                             <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
 
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/location"></ImageView>
 
                                 <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:text="Islamabad"
+                                    android:textColor="#AAA3A3"
+                                    android:textSize="17dp"></TextView>
                             </LinearLayout>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="7 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="7th Mar"
+                                android:textColor="#AAA3A3"
+                                android:textSize="17dp"></TextView>
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
                 <!-- Feature2 -->
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/colored_circular_boarder"
                     android:orientation="vertical"
+                    android:weightSum="3">
 
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_background"
+                        />
 
                     <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
 
                         <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
                             android:orientation="horizontal"
-                            android:paddingTop="8dp">
+                            android:weightSum="3">
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 2 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:paddingLeft="8dp"
+                                android:text="Item Name"
+                                android:textColor="#000000"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$15/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="$10/hr"
+                                android:textColor="#FF9800"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
                             <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
 
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/location"></ImageView>
 
                                 <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:text="Islamabad"
+                                    android:textColor="#AAA3A3"
+                                    android:textSize="17dp"></TextView>
                             </LinearLayout>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="8 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="7th Mar"
+                                android:textColor="#AAA3A3"
+                                android:textSize="17dp"></TextView>
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
 
-    <!--  addddddd  ?-->
+    <!-- Scrollable Content -->
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontalFeatureItems"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:text="Your Items"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/horizontalFeatureItems"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Your Items"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="View All"
+                android:textColor="#FF5722"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
+            android:paddingLeft="15dp"
             android:scrollbars="none">
 
             <LinearLayout
@@ -303,439 +305,191 @@
                 android:orientation="horizontal">
                 <!-- Feature1 -->
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
-
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/colored_circular_boarder"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_background"
+                        />
 
                     <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
 
                         <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
                             android:orientation="horizontal"
-                            android:paddingTop="8dp">
+                            android:weightSum="3">
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 1 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:paddingLeft="8dp"
+                                android:text="Item Name"
+                                android:textColor="#000000"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$10/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="$10/hr"
+                                android:textColor="#FF9800"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
                             <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
 
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/location"></ImageView>
 
                                 <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:text="Islamabad"
+                                    android:textColor="#AAA3A3"
+                                    android:textSize="17dp"></TextView>
                             </LinearLayout>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="7 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="7th Mar"
+                                android:textColor="#AAA3A3"
+                                android:textSize="17dp"></TextView>
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
                 <!-- Feature2 -->
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/colored_circular_boarder"
                     android:orientation="vertical"
+                    android:weightSum="3">
 
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/rounded_background"
+                        />
 
                     <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
 
                         <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
                             android:orientation="horizontal"
-                            android:paddingTop="8dp">
+                            android:weightSum="3">
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 2 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:paddingLeft="8dp"
+                                android:text="Item Name"
+                                android:textColor="#000000"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$15/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="$10/hr"
+                                android:textColor="#FF9800"
+                                android:textSize="20dp"
+                                android:textStyle="bold"></TextView>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
                             <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
 
                                 <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/location"></ImageView>
 
                                 <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3"
+                                    android:text="Islamabad"
+                                    android:textColor="#AAA3A3"
+                                    android:textSize="17dp"></TextView>
                             </LinearLayout>
 
                             <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="8 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="7th Mar"
+                                android:textColor="#AAA3A3"
+                                android:textSize="17dp"></TextView>
                         </LinearLayout>
+
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
     </LinearLayout>
-    <!--  addddddd 22 ?-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:text="Featured Items"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="bold" />
 
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <!-- Feature1 -->
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
-
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
-                            android:orientation="horizontal"
-                            android:paddingTop="8dp">
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 1 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$10/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
-
-                                <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="7 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <!-- Feature2 -->
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="230dp"
-                    android:layout_marginRight="16dp"
-                    android:background="@drawable/border"
-                    android:backgroundTint="#CCCACA"
-                    android:orientation="vertical"
-
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="120dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/user" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="230dp"
-                        android:layout_height="80dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="230dp"
-                            android:layout_height="40dp"
-                            android:orientation="horizontal"
-                            android:paddingTop="8dp">
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingLeft="5dp"
-                                android:text=" Item 2 "
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="end"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="10dp"
-                                android:text="$15/hr "
-                                android:textColor="#FF5722"
-                                android:textColorHighlight="orange"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="250dp"
-                            android:layout_height="50dp"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="150dp"
-                                android:layout_height="40dp"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="30dp"
-                                    android:layout_height="40dp"
-                                    android:layout_marginTop="0dp"
-                                    android:layout_marginRight="5dp"
-                                    android:src="@drawable/location" />
-
-                                <TextView
-                                    android:layout_width="129dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:paddingTop="5dp"
-                                    android:text="Islamabad "
-                                    android:textColor="#575252"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="129dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="start"
-                                android:layout_marginTop="10dp"
-                                android:paddingTop="5dp"
-                                android:text="8 March"
-                                android:textColor="#575252"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
 
 
     <LinearLayout
@@ -814,7 +568,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/conversation" />
+                android:src="@drawable/chat" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

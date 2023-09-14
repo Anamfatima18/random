@@ -1,9 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Chats">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Title Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Chat Layouts (Inside a ScrollView for scrolling) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#DDD9D9" />
+            <!-- Chat 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingTop="10px"
+                android:paddingLeft="10dp"
+                android:weightSum="3">
+
+                <!-- Part 1: Image -->
+
+                <!-- Part 2: Horizontal Layout for Name and Message Count -->
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Chat Image"
+                    android:src="@drawable/human" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Name of the Person -->
+
+                    <!-- Number of Messages in Chat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+
+                        android:text="John Doe"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:text="5 messages"
+                        android:textColor="#FF9800"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Part 3: Clickable Image -->
+                <ImageView
+                    android:layout_width="50dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:contentDescription="Clickable Image"
+                    android:focusable="true"
+                    android:src="@drawable/back"
+                    app:tint="#575352" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#DDD9D9" />
+            <!-- Chat 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingTop="10px"
+                android:paddingLeft="10dp"
+                android:weightSum="3">
+
+                <!-- Part 1: Image -->
+
+                <!-- Part 2: Horizontal Layout for Name and Message Count -->
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Chat Image"
+                    android:src="@drawable/human" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <!-- Name of the Person -->
+
+                    <!-- Number of Messages in Chat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+
+                        android:text="Miracle Philips"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:text="No messages"
+                        android:textColor="#91918F"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Part 3: Clickable Image -->
+                <ImageView
+                    android:layout_width="50dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:contentDescription="Clickable Image"
+                    android:focusable="true"
+                    app:tint="#575352"
+                    android:src="@drawable/back" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#DDD9D9" />
+            <!-- Chat 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingTop="10px"
+                android:paddingLeft="10dp"
+                android:weightSum="3">
+
+                <!-- Part 1: Image -->
+
+                <!-- Part 2: Horizontal Layout for Name and Message Count -->
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Chat Image"
+                    android:src="@drawable/human" />
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+
+                    <!-- Number of Messages in Chat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+
+                        android:text="Zaira Gouse"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:text="No messages"
+                        android:textColor="#91918F"
+
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Part 3: Clickable Image -->
+                <ImageView
+                    android:layout_width="50dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:contentDescription="Clickable Image"
+                    android:focusable="true"
+                    app:tint="#575352"
+                    android:src="@drawable/back" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="#DDD9D9" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#FDFDFD"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:layout_marginRight="30dp"
+            android:onClick="onHomeIconClick">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                app:tint="#000000"
+                android:src="@drawable/home" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="20sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onHomeIconClick">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/search" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textSize="20sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="onHomeIconClick">
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/add" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:clickable="true"
+            android:onClick="onHomeIconClick">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="39dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/chat"
+
+                app:tint="#FF5722" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textSize="20sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:layout_marginLeft="20dp"
+            android:onClick="onHomeIconClick">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/user" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="20sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
