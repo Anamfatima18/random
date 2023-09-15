@@ -1,8 +1,4 @@
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,30 +16,31 @@
         android:id="@+id/backButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@android:drawable/ic_menu_back"
+        android:src="@drawable/backArrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/emailVerificationText"
-        app:tint="#070707" />
+        />
     <TextView
         android:id="@+id/emailVerificationText"
         android:layout_width="361dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:text="  Email Verification"
         android:textSize="30sp"
         android:textColor="#000000"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backButton"
-        app:layout_alignTop="@+id/backButton"
-        app:layout_toRightOf="@+id/backButton" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="5dp"
-            android:background="#B8B8B8" />
+
+        />
 
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="0dp"
+        android:background="#B8B8B8" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -91,7 +88,8 @@
             android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/pin1"
-            android:background="@drawable/custom_edittext_background" />
+            android:background="@drawable/custom_edittext_background"
+            android:importantForAutofill="no" />
 
         <EditText
             android:layout_width="48dp"
@@ -102,7 +100,8 @@
             android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/pin2"
-            android:background="@drawable/custom_edittext_background" />
+            android:background="@drawable/custom_edittext_background"
+            android:importantForAutofill="no" />
 
         <EditText
             android:layout_width="48dp"
@@ -113,7 +112,8 @@
             android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/pin3"
-            android:background="@drawable/custom_edittext_background" />
+            android:background="@drawable/custom_edittext_background"
+            android:autofillHints="1" />
 
         <EditText
             android:layout_width="48dp"
@@ -124,7 +124,8 @@
             android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/pin4"
-            android:background="@drawable/custom_edittext_background" />
+            android:background="@drawable/custom_edittext_background"
+            android:importantForAutofill="no" />
         <EditText
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -134,7 +135,8 @@
             android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/pin5"
-            android:background="@drawable/custom_edittext_background" />
+            android:background="@drawable/custom_edittext_background"
+            android:importantForAutofill="no" />
 
 
 

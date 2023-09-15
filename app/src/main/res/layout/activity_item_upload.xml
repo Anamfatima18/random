@@ -1,9 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ItemUpload">
+    android:orientation="vertical"
+    tools:context=".Chats">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Title Layout -->
+
+    <!-- Chat Layouts (Inside a ScrollView for scrolling) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/backArrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/emailVerificationText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emailVerificationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Items"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+
+            />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="#DDD9D9" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/uploadmedia"
+                android:layout_width="500dp"
+                android:layout_height="227dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="167dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/missingborder"
+                    android:clickable="true"
+                    android:onClick="onHomeIconClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:src="@drawable/camera"
+                        app:tint="#F44336" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Image"
+                        android:layout_marginLeft="10dp"
+
+                        android:textColor="#F44336"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/uploadvideo"
+                    android:layout_width="150dp"
+                    android:layout_height="167dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/missingborder"
+                    android:clickable="true"
+                    android:onClick="onHomeIconClick"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/videocall"
+                        app:tint="#F44336" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Video"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#F44336"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="0dp"></TextView>
+
+                <EditText
+                    android:id="@+id/Itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/circular_background"
+                    android:hint="Enter Item Name"
+                    android:textSize="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Hourly rate"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="0dp"></TextView>
+
+                <EditText
+                    android:id="@+id/Hourlyrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/circular_background"
+                    android:hint="Enter Hourly Rate"
+                    android:textSize="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Description"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="0dp"></TextView>
+
+                <EditText
+                    android:id="@+id/eTName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingBottom="50dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/circular_background"
+                    android:hint="Enter Description"
+                    android:textSize="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="City"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="0dp"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/City"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seprator"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/circular_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="342dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Islamabad"
+                        android:textColor="#615E5E"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/down" />
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="35dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:background="#FDFDFD"
+        android:weightSum="5">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post Item"
+            android:textStyle="bold"
+
+            android:background="@drawable/curved_button_background"
+            android:textColor="#FFFFFF"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+</LinearLayout>

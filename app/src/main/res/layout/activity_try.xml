@@ -139,7 +139,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="1"
-                                    android:src="@drawable/location"></ImageView>
+                                    android:src="@drawable/location2"></ImageView>
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -230,7 +230,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="1"
-                                    android:src="@drawable/location"></ImageView>
+                                    android:src="@drawable/location2"></ImageView>
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -372,7 +372,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="1"
-                                    android:src="@drawable/location"></ImageView>
+                                    android:src="@drawable/location2"></ImageView>
 
                                 <TextView
                                     android:layout_width="0dp"
@@ -463,7 +463,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="20dp"
                                     android:layout_weight="1"
-                                    android:src="@drawable/location"></ImageView>
+                                    android:src="@drawable/location2"></ImageView>
 
                                 <TextView
                                     android:layout_width="0dp"

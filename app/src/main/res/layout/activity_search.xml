@@ -18,12 +18,12 @@
             android:id="@+id/backButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@android:drawable/ic_menu_back"
+            android:src="@drawable/backArrow"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/SearchResults"
-            app:tint="#151515" />
+             />
         <EditText
             android:id="@+id/emailVerificationText"
             android:layout_width="match_parent"
@@ -40,8 +40,7 @@
             android:paddingEnd="8dp"
             android:gravity="start"
             app:layout_constraintBottom_toBottomOf="@+id/backButton"
-            app:layout_alignTop="@+id/backButton"
-            app:layout_toRightOf="@+id/backButton" />
+             />
 
 
     </LinearLayout>
