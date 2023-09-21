@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
-</selector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background rectangle with curved corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" /> <!-- Adjust the radius for the desired curvature -->
+            <solid android:color="#FFFEFE" /> <!-- Background color -->
+        </shape>
+    </item>
+    <!-- ImageView (your image) -->
+
+</layer-list>

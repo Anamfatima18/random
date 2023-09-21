@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoCall">
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".photo">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- First child layout (70% of screen) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="#DAD3D3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="#DAD3D3"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00 : 58"
+
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="start"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+
+                app:layout_constraintBottom_toBottomOf="@+id/backButton"
+
+                />
+
+            <ImageView
+                android:layout_width="146dp"
+                android:layout_height="191dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="120dp"
+                android:background="@drawable/rounded_rectangle"
+                android:contentDescription="Your Image" />
+
+
+            <!-- Your content for the 70% section goes here -->
+        </LinearLayout>
+
+        <!-- Your content for the 70% section goes here -->
+    </LinearLayout>
+
+    <!-- Second child layout (30% of screen) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+
+        <LinearLayout
+            android:layout_width="388dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.1"
+            android:background="#ffffff">
+
+
+            <ImageView
+                android:layout_width="86dp"
+                android:layout_height="79dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+
+                android:contentDescription="Chat Image"
+                android:src="@drawable/micicon" />
+
+            <ImageView
+                android:layout_width="86dp"
+                android:layout_height="79dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+
+                android:contentDescription="Chat Image"
+                android:src="@drawable/offcamera" />
+
+
+            <ImageView
+                android:layout_width="82dp"
+                android:layout_height="77dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+
+                android:contentDescription="Chat Image"
+                android:src="@drawable/flipscreenlight" />
+
+            <ImageView
+                android:layout_width="86dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+
+                android:contentDescription="Chat Image"
+                android:src="@drawable/declinecallicon" />
+            <!-- Your content for the 30% section goes here -->
+        </LinearLayout>
+
+        <!-- Your content for the 30% section goes here -->
+    </LinearLayout>
+
+</LinearLayout>
+
+

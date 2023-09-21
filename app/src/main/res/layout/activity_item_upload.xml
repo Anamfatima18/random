@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context=".Chats">
 
     <!-- Title Layout -->
@@ -18,8 +19,8 @@
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:src="@drawable/backArrow"
+            android:layout_height="30dp"
+            android:src="@drawable/backarrow2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/emailVerificationText"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content"
             android:text="  Items"
             android:textColor="#000000"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/backButton"
 
@@ -45,10 +46,7 @@
         android:layout_marginTop="10dp"
         android:background="#DDD9D9" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+
 
         <LinearLayout
             android:id="@+id/form"
@@ -58,17 +56,17 @@
 
             <LinearLayout
                 android:id="@+id/uploadmedia"
-                android:layout_width="500dp"
-                android:layout_height="227dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="167dp"
+                    android:layout_width="143dp"
+                    android:layout_height="135dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
                     android:background="@drawable/missingborder"
                     android:clickable="true"
                     android:onClick="onHomeIconClick"
@@ -77,8 +75,8 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginTop="30dp"
                         android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginRight="50dp"
                         android:src="@drawable/camera"
                         app:tint="#F44336" />
@@ -86,20 +84,20 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
                         android:text="Upload Image"
-                        android:layout_marginLeft="10dp"
 
                         android:textColor="#F44336"
-                        android:textSize="20sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
-
                 <LinearLayout
-                    android:id="@+id/uploadvideo"
-                    android:layout_width="150dp"
-                    android:layout_height="167dp"
+                    android:layout_width="143dp"
+                    android:layout_height="135dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="30dp"
                     android:background="@drawable/missingborder"
                     android:clickable="true"
                     android:onClick="onHomeIconClick"
@@ -108,22 +106,24 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginRight="50dp"
                         android:layout_marginLeft="50dp"
                         android:layout_marginTop="30dp"
-                        android:src="@drawable/videocall"
+                        android:layout_marginRight="50dp"
+                        android:src="@drawable/camera"
                         app:tint="#F44336" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Upload Video"
-                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:text="Upload Image"
+
                         android:textColor="#F44336"
-                        android:textSize="20sp" />
-
-
+                        android:textSize="10sp" />
                 </LinearLayout>
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -132,15 +132,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
+                android:weightSum="30"
                 android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Name"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
-                    android:textColor="#000000"
+                   android:textColor="#000000"
                     android:gravity="bottom"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="0dp"></TextView>
@@ -154,7 +155,8 @@
                     android:paddingLeft="15dp"
                     android:background="@drawable/circular_background"
                     android:hint="Enter Item Name"
-                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="15dp"
                     />
@@ -163,7 +165,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Hourly rate"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:gravity="bottom"
@@ -177,9 +179,10 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:paddingLeft="15dp"
+                    android:textColor="#000000"
                     android:background="@drawable/circular_background"
                     android:hint="Enter Hourly Rate"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="15dp"
                     />
@@ -188,7 +191,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Description"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:gravity="bottom"
@@ -200,11 +203,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:paddingBottom="50dp"
+                    android:paddingBottom="40dp"
                     android:paddingLeft="15dp"
                     android:background="@drawable/circular_background"
                     android:hint="Enter Description"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
+                    android:textColor="#000000"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="15dp"
                     />
@@ -213,7 +217,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="City"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:textColor="#000000"
                     android:gravity="bottom"
@@ -232,18 +236,18 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="342dp"
+                        android:layout_width="215dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="2dp"
                         android:layout_marginBottom="5dp"
                         android:text="Islamabad"
-                        android:textColor="#615E5E"
-                        android:textSize="20sp" />
+                        android:textColor="#424040"
+                        android:textSize="15sp" />
 
                     <ImageView
-                        android:layout_width="25dp"
+                        android:layout_width="129dp"
                         android:layout_height="30dp"
                         android:layout_marginRight="5dp"
                         android:paddingTop="4dp"
@@ -252,7 +256,18 @@
 
 
 
-
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Post Item"
+                    android:textStyle="bold"
+                      android:layout_marginTop="20dp"
+                    android:background="@drawable/curved_button_background"
+                    android:textColor="#F3EBEB"
+                    android:padding="8dp"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
 
             </LinearLayout>
 
@@ -260,34 +275,8 @@
         </LinearLayout>
 
 
-    </ScrollView>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:paddingBottom="35dp"
-        android:gravity="center"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:orientation="horizontal"
-        android:background="#FDFDFD"
-        android:weightSum="5">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Post Item"
-            android:textStyle="bold"
-
-            android:background="@drawable/curved_button_background"
-            android:textColor="#FFFFFF"
-            android:padding="20dp"
-            android:textSize="20sp"
-            android:layout_weight="1"
-            android:gravity="center"/>
 
 
-    </LinearLayout>
 </LinearLayout>

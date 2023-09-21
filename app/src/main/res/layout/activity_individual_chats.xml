@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     android:weightSum="1"
     tools:context=".IndividualChats">
 
     <!-- First Horizontal Layout: Back Arrow -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
@@ -25,7 +26,7 @@
             <ImageView
                 android:id="@+id/backArrow"
                 android:layout_width="40dp"
-                android:layout_height="30dp"
+                android:layout_height="20dp"
                 android:clickable="true"
                 android:contentDescription="Back Arrow"
                 android:focusable="true"
@@ -34,7 +35,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="225dp"
+            android:layout_width="214dp"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:paddingLeft="10dp">
@@ -47,7 +48,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="John Doe"
                 android:textColor="#5E5C5C"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -64,8 +65,8 @@
 
                 <ImageView
                     android:id="@+id/callOption"
-                    android:layout_width="69dp"
-                    android:layout_height="40dp"
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
                     android:clickable="true"
                     android:contentDescription="Call Option"
                     android:focusable="true"
@@ -82,8 +83,9 @@
                 <ImageView
                     android:id="@+id/VideocallOption"
                     android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_height="30dp"
                     android:clickable="true"
+
                     android:contentDescription="Video Call Option"
                     android:focusable="true"
                     android:src="@drawable/videocall"
@@ -360,7 +362,7 @@
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="start"
@@ -421,7 +423,8 @@
                     android:layout_gravity="center_vertical"
                     android:text="Send"
                     android:textColor="#FDB422"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
+
                     android:textStyle="bold" />
             </LinearLayout>
 
